@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-image: url('./assets/324545676.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+

@@ -1,0 +1,60 @@
+.left-sidebar {
+    background-color: rgba(0, 0, 0, 0.95);
+    width: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+  }
+  
+  .icon img{
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: 35px;
+  }
+  
+  .gmail-modal, .linkedin-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .gmail-container, .linkedin-container {
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    border: 1px solid #000;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .close-button button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .close-button button:hover {
+    color: #f00;
+  }
+  
