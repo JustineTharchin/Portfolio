@@ -12,12 +12,17 @@
     opacity: 0.9;
   }
   
-  .icon img{
+  .icon img {
     color: #fff;
     font-size: 18px;
     margin-bottom: 20px;
     cursor: pointer;
     width: 35px;
+    transition: transform 0.2s;
+  }
+  
+  .icon img:hover {
+    transform: scale(1.1);
   }
   
   .gmail-modal, .linkedin-modal {
