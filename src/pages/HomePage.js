@@ -4,13 +4,15 @@ import '../style/HomePage.css';
 import LeftSidebar from '../components/LeftSideBar';
 import NavbarMenu from '../components/NavbarMenu';
 import PortfolioPDF from '../assets/Porfolio_Justine_Tharchin.pdf';
-import Video from '../assets/architecture.mp4';
-import SndVideo from '../assets/code.mp4';
-import VideoMouse from '../assets/computer.png';
+import Video from '../assets/code.mp4';
+//import SndVideo from '../assets/code.mp4';
 import LogoReact from '../logo.svg';
+import LogoCSS3 from '../assets/css3.png';
+import LogoFigma from '../assets/figma.png';
+import LogoSuiteAdobe from '../assets/adobe.png';
 import { createContext } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-//import Cards from '../components/Cards';
+import Block from '../components/Block';
 
 function HomePage() {
   const [showPDF, setShowPDF] = useState(false);
@@ -44,28 +46,41 @@ function HomePage() {
           <p>PORTFOLIO</p>
         </div>
       </ParallaxLayer>
-      <div className="texteHomepage">
-          <p>DEVELOPPEMENT WEB</p>
+    <div className="texteHomepage">
           <ParallaxLayer offset={0} speed={0.55}>
-        <video className="animation_layer parallax" id="sndSlide" autoPlay loop muted>
-            <source src={SndVideo} type="video/mp4" />
-          </video>
-      </ParallaxLayer>
-      <ParallaxLayer offset={0} speed={0.55}>
-        <img className="animation_layer parallax" id="computer" src={VideoMouse} /> 
-        <div className="logo">
-          <img src={LogoReact} alt="React Logo" />
-        </div>       
-      </ParallaxLayer>
-      <div className="bubble-two">
-          <p className="bubble-text-two">Cliquez sur l'icône PDF pour ouvrir mon CV</p>
+          <div className="blocks-container">
+        <Block
+          title="React.js"
+          imageSrc={LogoReact}
+          text="Ce site a été réalisé en React.js"
+          imageAlt="React"
+        />
+        <Block
+          title="CSS 3"
+          imageSrc={LogoCSS3}
+          text="Ce site a été réalisé en CSS3"
+          imageAlt="CSS3"
+        />
+        <Block
+          title="Suite Adobe"
+          imageSrc={LogoSuiteAdobe}
+          text="Ce site a été réalisé avec l'aide de la suite Adobe"
+          imageAlt="Suite Adobe"
+        />
+        <Block
+          title="Figma"
+          imageSrc={LogoFigma}
+          text="Ce site a été réalisé avec l'aide de Figma"
+          imageAlt="Figma"
+        />
       </div>
-    </div>
-    <ParallaxLayer offset={0} speed={0.75}>
-    <div className="texteHomepagetwo">
-      <p>DESIGN UX/UI</p>
-    </div>   
       </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.75}>
+        <div className="texteHomepagetwo">
+          <p>DESIGN UX/UI</p>
+        </div>   
+        </ParallaxLayer>
+    </div>
     </Parallax>
       <NavbarMenu />
       <LeftSidebar togglePDF={togglePDF} />
