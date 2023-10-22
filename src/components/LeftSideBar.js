@@ -20,9 +20,9 @@ const LeftSidebar = ({ togglePDF }) => {
       };
 
 
-      const toggleLinkedin = () => {
+    /*  const toggleLinkedin = () => {
         setShowLinkedin(!showLinkedin);
-      };
+      };   */
       
       const closeLinkedin = () => {
           setShowLinkedin(false);
@@ -67,7 +67,7 @@ const LeftSidebar = ({ togglePDF }) => {
       <div className="icon" onClick={togglePDF}>
         <img src={PDF} alt="PDF" />
       </div>
-      <div className="icon" onClick={toggleLinkedin}>
+      <div className="icon" onClick={openLinkedInChat}>
         <img src={LinkedIn} alt="LinkedIn" />
       </div>
       {showLinkedin && (
